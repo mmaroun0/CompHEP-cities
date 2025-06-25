@@ -51,7 +51,8 @@ cities = [["Chicago",41.8781, -87.6298],
           ["Long Beach", 33.7701, -118.1937],
           ["Kansas City", 39.0997, -94.5786],
           ["Omaha", 41.2565, -95.9345],
-          ["Virginia Beach", 36.8529, -75.9780]]
+          ["Virginia Beach", 36.8529, -75.9780],
+          ["Amherst", 42.3757, -72.5199]]
         
 scale = 5
 
@@ -63,5 +64,7 @@ map.drawstates()
 # Get the location of each city and plot it
 for (city, latitude, longitude) in cities:
     x, y = map(longitude, latitude)
+    if city == "Amherst":
+        map.plot(x, y, marker='*', color='Black')
     map.plot(x, y, marker='o',color='Red')
 plt.show()
