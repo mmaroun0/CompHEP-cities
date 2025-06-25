@@ -66,5 +66,6 @@ for (city, latitude, longitude) in cities:
     x, y = map(longitude, latitude)
     if city == "Amherst":
         map.plot(x, y, marker='*', color='Black')
-    map.plot(x, y, marker='o',color='Red')
+    else:
+        map.plot(x, y, marker='o',color='Red')
 plt.show()
