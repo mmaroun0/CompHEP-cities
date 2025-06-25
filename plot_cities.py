@@ -64,7 +64,7 @@ map.drawcountries()
 map.drawcoastlines()
 map.drawrivers(color='blue')
 map.shadedrelief() 
-#map.drawlakes(color='blue')
+
 
 
 # Get the location of each city and plot it
