@@ -53,7 +53,7 @@ cities = [["Chicago",41.8781, -87.6298],
           ["Omaha", 41.2565, -95.9345],
           ["Virginia Beach", 36.8529, -75.9780],
           ["Amherst", 42.3757, -72.5199]]
-        
+
 scale = 5
 
 map = Basemap(llcrnrlon=-119,llcrnrlat=22,urcrnrlon=-64,urcrnrlat=49,
@@ -63,16 +63,14 @@ map.drawstates()
 map.drawcountries()
 map.drawcoastlines()
 map.drawrivers(color='blue')
-map.shadedrelief() 
+map.shadedrelief()
 
 
 
-# Get the location of each city and plot it
-for (city, latitude, longitude) in cities:
-    x, y = map(longitude, latitude)
-    if city == "Amherst":
-        map.plot(x, y, marker='*', color='Black')
-    else:
+def main():
+    # Get the location of each city and plot it
+    for (city, latitude, longitude) in cities:
+        x, y = map(longitude, latitude)
         map.plot(x, y, marker='o',color='Red')
-plt.show()
-# test
+    plt.show()
+    plt.savefig('figs/cities.pdf', dpi=300, bbox_inches='tight')
