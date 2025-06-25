@@ -1,0 +1,24 @@
+[project]
+name = "comphep-cities"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "matplotlib",
+    "basemap"
+]
+
+[dependency-groups]
+
+dev = [
+    "matplotlib",
+    "basemap"
+]
+
+[project.scripts]
+comphep-cities = "comphep_cities.plot_cities:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

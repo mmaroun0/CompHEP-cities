@@ -10,8 +10,10 @@ map = Basemap(llcrnrlon=-119,llcrnrlat=22,urcrnrlon=-64,urcrnrlat=49,
 
 map.drawstates()
 
-# Get the location of each city and plot it
-for (city, latitude, longitude) in cities:
-    x, y = map(longitude, latitude)
-    map.plot(x, y, marker='o',color='Red')
-plt.show()
+def main():
+    # Get the location of each city and plot it
+    for (city, latitude, longitude) in cities:
+        x, y = map(longitude, latitude)
+        map.plot(x, y, marker='o',color='Red')
+    plt.show()
+    plt.savefig('figs/cities.pdf', dpi=300, bbox_inches='tight')
