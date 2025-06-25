@@ -77,3 +77,6 @@ def main():
             map.plot(x, y, marker='o',color='Red')
     plt.show()
     plt.savefig('figs/cities.pdf', dpi=300, bbox_inches='tight')
+
+if __name__ == "__main__":
+    main()
