@@ -69,3 +69,4 @@ for (city, latitude, longitude) in cities:
     else:
         map.plot(x, y, marker='o',color='Red')
 plt.show()
+# test
